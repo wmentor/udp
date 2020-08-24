@@ -36,7 +36,7 @@ func New(opts string) (*Client, error) {
 		return nil, ErrInvalidUdpBufferSize
 	}
 
-	maxMessageSize := params.GetInt("max_nessage_size", 64*1024)
+	maxMessageSize := params.GetInt("max_nessage_size", 128*1024)
 	if maxMessageSize < 1024 {
 		return nil, ErrInvalidMaxMessageSize
 	}
